@@ -67,7 +67,7 @@ sub leetspeak {
      
 }
 
-sub ending_hash {
+sub ending_digits {
     my ($password,$p_length) = @_;
 
     # Convert string to array of characters
@@ -105,15 +105,15 @@ print "Include whitespace between characters? (y/n) ";
 my $whitespace = <STDIN>;
 chomp $whitespace;
 # Not really a hash, but some random number
-print "Include ending hash? (y/n) ";
+print "Include ending digits? (y/n) ";
 my $hash = <STDIN>;
 chomp $hash;
 if ($hash eq 'Y' || $hash eq 'y'){
     # Not really a hash, but some random number
-    print "Length of hash? ";
+    print "Number of digits to add? ";
     my $hash_length = <STDIN>;
     chomp $hash_length;
-    $temp_passord = ending_hash($temp_passord,$hash_length);
+    $temp_passord = ending_digits($temp_passord,$hash_length);
 }
 
 # asks the user if they want whitespace inbetween the characters
